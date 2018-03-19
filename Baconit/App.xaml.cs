@@ -22,6 +22,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using UnhandledExceptionEventArgs = Windows.UI.Xaml.UnhandledExceptionEventArgs;
 
 namespace Baconit
 {
@@ -65,10 +66,11 @@ namespace Baconit
             BaconMan = new BaconManager(false);
 
             // Now telemetry
-            Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
-                Microsoft.ApplicationInsights.WindowsCollectors.Metadata |
-                Microsoft.ApplicationInsights.WindowsCollectors.UnhandledException |
-                Microsoft.ApplicationInsights.WindowsCollectors.Session);
+
+            //Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
+            //    Microsoft.ApplicationInsights.WindowsCollectors.Metadata |
+            //    Microsoft.ApplicationInsights.WindowsCollectors.UnhandledException |
+            //    Microsoft.ApplicationInsights.WindowsCollectors.Session);
 
             // Init the app
             this.InitializeComponent();
